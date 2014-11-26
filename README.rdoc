@@ -1,28 +1,9 @@
 == README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Welcome to the UserSketch app.  It demonstrates a variety of technologies that can enable clean and easy user story implementation.
 
-Things you may want to cover:
+Prerequisites:
 
-* Ruby version
+* Knowledge of Ruby on Rails development.
 
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
-
-
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.
+The app is deployed for demonstration purposes to https://infinite-eyrie-8115.herokuapp.com .
