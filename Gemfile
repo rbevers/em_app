@@ -48,3 +48,8 @@ group :test, :development do
   gem 'database_cleaner'
   gem 'selenium-webdriver'
 end
+
+group :production, :staging do
+  gem "rails_12factor"
+end
+
