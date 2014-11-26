@@ -5,5 +5,14 @@ Welcome to the UserSketch app.  It demonstrates a variety of technologies that c
 Prerequisites:
 
 * Knowledge of Ruby on Rails development.
+* Knowledge of Bower for JavaScript development.
+
+Make sure you have Node.js installed...
+
+* http://nodejs.org/download/
+
+And Bower installed...
+
+<tt>npm install bower -g</tt>
 
 The app is deployed for demonstration purposes to https://infinite-eyrie-8115.herokuapp.com .
