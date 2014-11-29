@@ -1,18 +1,25 @@
 == README
 
-Welcome to the UserSketch app.  It demonstrates a variety of technologies that can enable clean and easy user story implementation.
+Welcome to the EM App.
 
-Prerequisites:
+It demonstrates skills with Ruby on Rails, AngularJS, CORS, OAuth, Open ID delegated user accounts and other miscellanea.
 
-* Knowledge of Ruby on Rails development.
-* Knowledge of Bower for JavaScript development.
+=== Running locally
 
-Make sure you have Node.js installed...
+Make sure you have Node.js installed to enable JavaScript goodies.
 
-* http://nodejs.org/download/
+http://nodejs.org/download/
 
-And Bower installed...
+Next, ensure that Bower is installed to enable the bower-rails gem to make JavaScript & Ruby on Rails play nice together.
 
 <tt>npm install bower -g</tt>
 
-The app is deployed for demonstration purposes to https://infinite-eyrie-8115.herokuapp.com .
+You'll need to have a compatible version of Ruby installed.  I use rvm like so.
+
+<tt>rvm install 2.1.3</tt>
+
+*NOTE:  If you don't have a recent version of RVM, it won't auto-detect the right Ruby version from the Gemfile.  Best to get the latest stable.*
+
+Install all the sundry gems required using Bundler.
+
+<tt>bundle install</tt>
