@@ -6,21 +6,21 @@
 #
 default: &default
   adapter: postgresql
-  user: user_sketch
+  user: em_app
   host: localhost
   port: 5432
 
 development:
   <<: *default
-  database: user_sketch_dev
+  database: em_app
 
 # Warning: The database defined as "test" will be erased and
 # re-generated from your development database when you run "rake".
 # Do not set this db to the same as development or production.
 test:
   <<: *default
-  database: user_sketch_test
+  database: em_app_test
 
 production:
   <<: *default
-  database: user_sketch
+  database: em_app

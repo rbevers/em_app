@@ -6,20 +6,46 @@ It demonstrates skills with Ruby on Rails, AngularJS, CORS, OAuth, Open ID deleg
 
 === Running locally
 
+==== 1. Node.js is required for JavaScript support.
+
 Make sure you have Node.js installed to enable JavaScript goodies.
 
 http://nodejs.org/download/
+
+==== 2. Bower is used for JavaScript dependency management.
 
 Next, ensure that Bower is installed to enable the bower-rails gem to make JavaScript & Ruby on Rails play nice together.
 
 <tt>npm install bower -g</tt>
 
-You'll need to have a compatible version of Ruby installed.  I use rvm like so.
+==== 3. Ruby 2.1.3 is required.
+
+You'll need to have a compatible version of Ruby installed.  If you don't have Ruby 2.1.3 or don't use RVM you'll need to figure this step out yourself.
+
+I use rvm like so.
 
 <tt>rvm install 2.1.3</tt>
 
 *NOTE:  If you don't have a recent version of RVM, it won't auto-detect the right Ruby version from the Gemfile.  Best to get the latest stable.*
 
+==== 4. Get all the necessary gems using Bundler.
+
 Install all the sundry gems required using Bundler.
 
 <tt>bundle install</tt>
+
+==== 5. Setup PostgreSQL database for Rails.
+
+I use Postgres.app, which can be acquired here:  http://postgresapp.com
+
+After it is installed and running, click on the elephant and choose "Open psql".  Inside of psql you can add the required user by running the provided script using the following command (replace <path_to_code> with the actual local path to your cloned code).
+
+<tt>\i <path_to_code>/prep.sql</tt>
+
+This will add the +em_app+ user to your PostgreSQL server which is the account under which the app database is created and accessed.
+
+==== 6. Setup the database with Rails data.
+
+Run the Rake command to setup the database.
+
+<tt>rake db:setup</tt>
