@@ -40,7 +40,7 @@ I use Postgres.app, which can be acquired here:  http://postgresapp.com
 
 After it is installed and running, click on the elephant and choose "Open psql".  Inside of psql you can add the required user by running the provided script using the following command (replace <path_to_code> with the actual local path to your cloned code).
 
-<tt>\i <path_to_code>/prep.sql</tt>
+<tt>\i <path_to_code>/db/create-em_app-user.sql</tt>
 
 This will add the +em_app+ user to your PostgreSQL server which is the account under which the app database is created and accessed.
 
