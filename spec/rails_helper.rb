@@ -50,9 +50,17 @@ RSpec.configure do |config|
   # https://relishapp.com/rspec/rspec-rails/docs
   config.infer_spec_type_from_file_location!
 
+  config.include FactoryGirl::Syntax::Methods
+
   config.before(:suite) do
     DatabaseCleaner.clean_with :truncation
     DatabaseCleaner.clean_with :transaction
+    begin
+      DatabaseCleaner.start
+      FactoryGirl.lint
+    ensure
+      DatabaseCleaner.clean
+    end
   end
 
   config.after(:each) do
@@ -60,12 +68,15 @@ RSpec.configure do |config|
   end
 
   config.around(:each, type: :feature, js: true) do |ex|
-    DatabaseCleaner.strategy = :truncation
-    DatabaseCleaner.start
-    self.use_transactional_fixtures = false
-    ex.run
-    self.use_transactional_fixtures = true
-    DatabaseCleaner.clean
+    begin
+      DatabaseCleaner.strategy = :truncation
+      DatabaseCleaner.start
+      self.use_transactional_fixtures = false
+      ex.run
+    ensure
+      self.use_transactional_fixtures = true
+      DatabaseCleaner.clean
+    end
   end
 
   Capybara.register_driver :selenium do |app|
