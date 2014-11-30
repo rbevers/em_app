@@ -60,6 +60,11 @@ Rails.application.configure do
   # Set this to true and configure the email server for immediate delivery to raise delivery errors.
   # config.action_mailer.raise_delivery_errors = false
 
+  config.action_mailer.default_url_options = {} if config.action_mailer.default_url_options.blank?
+  config.action_mailer.default_url_options[:protocol] = ENV['D_PROTOCOL'] if ENV['D_PROTOCOL']
+  config.action_mailer.default_url_options[:host] = ENV['D_HOST'] if ENV['D_HOST']
+  config.action_mailer.default_url_options[:port] = ENV['D_PORT'] if ENV['D_PORT']
+
   # Enable locale fallbacks for I18n (makes lookups for any locale fall back to
   # the I18n.default_locale when a translation cannot be found).
   config.i18n.fallbacks = true
