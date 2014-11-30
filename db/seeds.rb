@@ -5,5 +5,16 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
-User.create(email: 'rbevers@acm.org', password: 'megaSh4rpC0d3r!')
-User.create(email: 'lmiller@emyth.com', password: 'aMi6htYfineJud63Ochar$')
+users = [
+  {email: 'rbevers@acm.org', password: 'megaSh4rpC0d3r!', first_name: 'Russell', last_name: 'Bevers'},
+  {email: 'lmiller@emyth.com', password: 'aMi6htYfineJud63Ochar$', first_name: 'Lenny', last_name: 'Miller'}
+]
+users.each do |attribs|
+  user = User.find_by_email(attribs[:email])
+  if user.present?
+    user.update_attributes(attribs)
+  else
+    User.create(attribs)
+  end
+end
+
