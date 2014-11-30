@@ -15,8 +15,6 @@ Rails.application.config.assets.precompile << Proc.new do |path|
     if full_path.starts_with? app_assets_path
       puts "including asset: " + full_path
       result = true
-    else
-      puts "excluding asset: " + full_path
     end
   end
   result
