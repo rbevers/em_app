@@ -1,5 +1,5 @@
-window.controllers.controller('LoginController', ['$scope', '$rootScope', '$http',
-  ($scope, $rootScope, $http) ->
+window.controllers.controller('LoginController', ['$scope', '$rootScope', '$http', '$location',
+  ($scope, $rootScope, $http, $location) ->
     $scope.email = null
     $scope.password = null
     
@@ -19,5 +19,6 @@ window.controllers.controller('LoginController', ['$scope', '$rootScope', '$http
         $rootScope.access.token = data.access_token
         $rootScope.access.type = data.token_type
         $rootScope.access.expiry = Date.now() + (data.expires_in * 1000)
+        $location.path('/')
       )
 ])
