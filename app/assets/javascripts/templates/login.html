@@ -1,8 +1,14 @@
-<div class="container-fluid">
+<div class="container-fluid" ng-class="emStyle">
   <div class="row" ng-show="errorMessage">
     <div class="col-md-12 alert alert-warning">{{errorMessage}}</div>
   </div>
   <div class="row">
+    <ul id="em-styles" class="pull-right nav nav-pills nav-stacked">
+      <li role="presentation" ng-class="{active: !emStyle}"><a ng-click="emStyle=null">No style</a></li>
+      <li role="presentation" ng-class="{active: emStyle=='clean'}"><a ng-click="emStyle='clean'">Clean</a></li>
+      <li role="presentation" ng-class="{active: emStyle=='avant-garde'}"><a ng-click="emStyle='avant-garde'">Avant-garde</a></li>
+    </ul>
+
     <div id="em-red"></div>
     <div id="em-green"></div>
     <div id="em-blue"></div>

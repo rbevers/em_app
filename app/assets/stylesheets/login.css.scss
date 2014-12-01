@@ -1,129 +1,159 @@
+html body {
+  background-color: rgb(250, 246, 235);
+}
+
 #em-notice, #em-alert { margin-bottom: 0; }
 
-#em-red, #em-green, #em-blue, .em-white {
-  display: inline-block;
-  margin: 0;
-  position: absolute;
-  z-index: -10;
-}
-
-.em-white {
-  background-color: white;
-  opacity: 1.0;
-}
-
-#em-red {
-  background-color: #dd5f32;
-  height: 65px;
-  width: 190px;
-  margin-top: 30px;
-  margin-left: 103px;
-}
-#em-white4red {
-  height: 15px;
-  width: 93px;
-  margin-top: 30px;
-  margin-left: 201px;
-}
-
-#em-green {
-  background-color: #91b06a;
-  height: 210px;
-  width: 170px;
-  margin-top: 95px;
-  margin-left: 33px;
-}
-#em-white4green {
-  height: 45px;
-  width: 133px;
-  margin-top: 205px;
-  margin-left: 33px;
-}
-
-#em-blue {
-  background-color: #4298b5;
-  height: 280px;
-  width: 164px;
-  margin-top: 85px;
-  margin-left: 203px;
-}
-#em-white4blue {
-  height: 90px;
-  width: 104px;
-  margin-top: 275px;
-  margin-left: 203px;
+#em-styles {
+  margin-top: 20px;
+  margin-right: 20px;
 }
 
 #new_user {
   display: inline-block;
   margin-top: 30px;
   margin-left: 80px;
-/*
-  border-left: solid 1px lightgrey;
-  border-bottom-left-radius: 10px;
-  border-bottom-right-radius: 10px;
-  border-right: solid 1px lightgrey;
-  -webkit-box-shadow: 0 6px 6px -6px black;
-     -moz-box-shadow: 0 6px 6px -6px black;
-          box-shadow: 0 6px 6px -6px black;
-*/
-  h2 {
-    color: white;
-    margin-bottom: 25px;
+}
 
-    small { color: black; }
+/* Original clean login */
+
+.clean {
+  #em-red, #em-green, #em-blue, .em-white { display: none; }
+
+  #new_user {
+    padding: 0 20px 20px 20px;
+    margin-top: 0;
+    background-color: white;
+    border-left: solid 1px lightgrey;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    border-right: solid 1px lightgrey;
+    -webkit-box-shadow: 0 6px 6px -6px black;
+       -moz-box-shadow: 0 6px 6px -6px black;
+            box-shadow: 0 6px 6px -6px black;
   }
+}
 
-  h2:first-letter {
-    color: black;
+/* Avant-garde login */
+
+.avant-garde {
+  #em-red, #em-green, #em-blue, .em-white {
+    display: inline-block;
+    margin: 0;
+    position: absolute;
+    z-index: -10;
   }
-
-  .form-group label {
-    color: white;
-    font-weight: normal;
+  
+  .em-white {
+    background-color: rgb(250, 246, 235);
+    opacity: 1.0;
   }
-
-  .checkbox {
-    margin-left: -40px;
-    max-width: 150px;
+  
+  #em-red {
+    background-color: #dd5f32;
+    height: 65px;
+    width: 190px;
+    margin-top: 30px;
+    margin-left: 103px;
   }
-
-  .btn {
-    margin-top: -35px;
+  #em-white4red {
+    height: 15px;
+    width: 93px;
+    margin-top: 30px;
+    margin-left: 201px;
+  }
+  
+  #em-green {
+    background-color: #91b06a;
+    height: 210px;
+    width: 170px;
+    margin-top: 95px;
+    margin-left: 33px;
+  }
+  #em-white4green {
+    height: 45px;
+    width: 133px;
+    margin-top: 205px;
+    margin-left: 33px;
+  }
+  
+  #em-blue {
+    background-color: #4298b5;
+    height: 280px;
+    width: 164px;
+    margin-top: 85px;
+    margin-left: 203px;
+  }
+  #em-white4blue {
+    height: 90px;
+    width: 104px;
+    margin-top: 275px;
+    margin-left: 203px;
+  }
+  
+  #new_user {
+  
+    h2 {
+      color: white;
+      margin-bottom: 25px;
+  
+      small { color: black; }
+    }
+  
+    h2:first-letter {
+      color: black;
+    }
+  
+    .form-group label {
+      color: white;
+      font-weight: normal;
+    }
+  
+    .checkbox {
+      margin-left: -40px;
+      max-width: 150px;
+    }
+  
+    .btn.btn-success {
+      margin-top: -35px;
+      background-color: #99b160;
+    }
   }
 }
 
 @media (max-width: 767px) {
-  #em-red {
-  margin-left: 103px;
-  }
-  #em-white4red {
-  margin-left: 201px;
-  }
-
-  #em-green {
-  height: 210px;
-  width: 150px;
-  margin-top: 95px;
-  margin-left: 31px;
-  }
-  #em-white4green {
-  height: 35px;
-  width: 130px;
-  margin-top: 250px;
-  margin-left: 31px;
-  }
-
-  #em-blue {
-  height: 280px;
-  width: 124px;
-  margin-top: 85px;
-  margin-left: 181px;
-  }
-  #em-white4blue {
-  height: 60px;
-  width: 64px;
-  margin-top: 305px;
-  margin-left: 181px;
+  .avant-garde {
+    #em-red {
+      margin-left: 103px;
+    }
+    #em-white4red {
+      margin-left: 201px;
+    }
+  
+    #em-green {
+      height: 210px;
+      width: 150px;
+      margin-top: 95px;
+      margin-left: 31px;
+    }
+    #em-white4green {
+      height: 35px;
+      width: 130px;
+      margin-top: 250px;
+      margin-left: 31px;
+    }
+  
+    #em-blue {
+      height: 280px;
+      width: 124px;
+      margin-top: 85px;
+      margin-left: 181px;
+    }
+    #em-white4blue {
+      height: 60px;
+      width: 64px;
+      margin-top: 305px;
+      margin-left: 181px;
+    }
   }
 }
