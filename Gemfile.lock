@@ -62,6 +62,8 @@ GEM
       thread_safe (~> 0.1)
       warden (~> 1.2.3)
     diff-lcs (1.2.5)
+    doorkeeper (1.4.0)
+      railties (>= 3.1)
     erubis (2.7.0)
     execjs (2.2.2)
     factory_girl (4.5.0)
@@ -197,6 +199,7 @@ DEPENDENCIES
   coffee-rails (~> 4.0.0)
   database_cleaner
   devise
+  doorkeeper
   factory_girl_rails
   jbuilder (~> 2.0)
   jquery-rails

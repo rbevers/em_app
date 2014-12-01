@@ -17,6 +17,7 @@ gem 'non-stupid-digest-assets'
 
 gem 'devise'
 gem 'bootstrap_form'
+gem 'doorkeeper'
 
 # Use jquery as the JavaScript library
 gem 'jquery-rails'
