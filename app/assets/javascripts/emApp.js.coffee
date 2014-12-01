@@ -12,6 +12,10 @@ window.emApp.config(['$routeProvider', ($routeProvider) ->
     templateUrl: 'login.html',
     controller: 'LoginController'
   })
+  .when('/log_out', {
+    template: '',
+    controller: 'LogoutController'
+  })
   .when('/', {
     templateUrl: 'index.html',
     controller: 'HomeController'
