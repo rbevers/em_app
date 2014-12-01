@@ -1,0 +1,26 @@
+#em-notice, #em-alert { margin-bottom: 0; }
+
+#em-red {
+  background-color: #dd5f32;
+}
+
+#em-blue {
+  background-color: #4298b5;
+}
+
+#em-green {
+  background-color: #91b06a;
+}
+
+#new_user {
+  display: inline-block;
+  padding: 0 20px 20px 20px;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  text-align: left;
+  border-left: solid 1px lightgrey;
+  border-right: solid 1px lightgrey;
+  -webkit-box-shadow: 0 6px 6px -6px black;
+     -moz-box-shadow: 0 6px 6px -6px black;
+          box-shadow: 0 6px 6px -6px black;
+}

@@ -16,6 +16,7 @@ gem 'coffee-rails', '~> 4.0.0'
 gem 'non-stupid-digest-assets'
 
 gem 'devise'
+gem 'bootstrap_form'
 
 # Use jquery as the JavaScript library
 gem 'jquery-rails'
