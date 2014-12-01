@@ -2,7 +2,7 @@
 
 Welcome to the EM App.
 
-It demonstrates skills with Ruby on Rails, AngularJS, CORS, OAuth, Open ID delegated user accounts and other miscellanea.
+It demonstrates skills with Ruby on Rails, AngularJS, OAuth, and other miscellanea.
 
 === Running locally
 
@@ -49,3 +49,23 @@ This will add the +em_app+ user to your PostgreSQL server which is the account u
 Run the Rake command to setup the database.
 
 <tt>rake db:setup</tt>
+
+==== 7. Make sure the tests run.
+
+Run the Railsy tests.
+
+<tt>rake spec</tt>
+
+Run the JavaScripty tests.
+
+<tt>rake teaspoon</tt>
+
+==== 8. Run the local server.
+
+<tt>rails server</tt>
+
+Open the URL:  http://localhost:3000
+
+==== 9. Log in
+
+If you're in the system seed data you can log in with your email and the password <tt>easyToRemember</tt>.
