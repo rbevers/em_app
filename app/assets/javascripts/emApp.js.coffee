@@ -14,7 +14,8 @@ window.emApp.config(['$routeProvider', ($routeProvider) ->
     controller: 'LoginController'
   })
   .when('/', {
-    templateUrl: 'index.html'
+    templateUrl: 'index.html',
+    controller: 'HomeController'
   })
   .otherwise({
     redirectTo: '/'
