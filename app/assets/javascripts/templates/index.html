@@ -1,0 +1,23 @@
+<div class="container-fluid">
+  <div class="row">
+    <h2>additional features of the application</h2>
+    <ul class="nav nav-pills">
+      <li><a href="/users/sign_out">Log out</a></li>
+    </ul>
+  </div>
+  <div class="row">
+    <h5>Gratuitious Hello feature...</h5>
+    <div class="panel panel-success">
+      <div class="panel-heading">
+        <h1 ng-if="name">Hello, {{name}}</h1>
+      </div>
+      <div class="panel-body">
+        <form class="form-inline">
+          <div class="form-group">
+            <input class="form-control" type="text" placeholder="Enter your name" autofocus ng-model="name">
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>

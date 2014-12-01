@@ -82,5 +82,6 @@ RSpec.configure do |config|
   Capybara.register_driver :selenium do |app|
     Capybara::Selenium::Driver.new(app, :browser => :chrome)
   end
+  Capybara.default_wait_time = 2.seconds
 
 end

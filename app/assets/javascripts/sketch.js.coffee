@@ -1,2 +1,0 @@
-sketch = angular.module('sketch', [
-])

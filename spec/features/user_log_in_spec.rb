@@ -19,7 +19,6 @@ feature 'As a User I want to log in so that I can begin utilizing the additional
     fill_in 'Password', with: 'abcDEF123ivvvi'
     click_button 'Log in'
     expect(page).to have_content 'Signed in successfully.'
-    expect(page).to have_content 'additional features of the application'
   end
 
   scenario 'failure due to bad password' do
