@@ -8,11 +8,6 @@ feature 'As a User I want to log in so that I can begin utilizing the additional
     create(:user, email: 'iwanna@login.com', password: 'abcDEF123ivvvi')
   end
 
-  scenario 'initial hit to home page goes to log in page' do
-    visit '/'
-    expect(current_path).to eq('/users/sign_in')
-  end
-
   scenario 'successful log in' do
     visit '/users/sign_in'
     fill_in 'Email', with: 'iwanna@login.com'

@@ -1,6 +1,5 @@
 #= require_self
-#= require_tree ./em/services
-#= require_tree ./em/controllers
+#= require_tree ./controllers
 window.emApp = angular.module('emApp', [
   'templates',
   'ngRoute',
