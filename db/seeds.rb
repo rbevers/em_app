@@ -6,8 +6,8 @@
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 users = [
-  {email: 'rbevers@acm.org', password: 'megaSh4rpC0d3r!', first_name: 'Russell', last_name: 'Bevers'},
-  {email: 'lmiller@emyth.com', password: 'aMi6htYfineJud63Ochar$', first_name: 'Lenny', last_name: 'Miller'}
+  {email: 'rbevers@acm.org', password: 'easyToRemember', first_name: 'Russell', last_name: 'Bevers'},
+  {email: 'lmiller@emyth.com', password: 'easyToRemember', first_name: 'Lenny', last_name: 'Miller'}
 ]
 users.each do |attribs|
   user = User.find_by_email(attribs[:email])
